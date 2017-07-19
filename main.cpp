@@ -13,6 +13,9 @@
 
 #include <cstdlib>
 
+#include "src/Pump.hpp"
+#include "src/SyrupPump.hpp"
+
 using namespace std;
 
 /*
