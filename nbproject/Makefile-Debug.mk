@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/src/CupDispenser.o \
 	${OBJECTDIR}/src/Machine.o \
 	${OBJECTDIR}/src/MachineStates/LoadingState.o \
 	${OBJECTDIR}/src/MachineStates/SaleReadyState.o \
@@ -74,6 +75,11 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/src/CupDispenser.o: src/CupDispenser.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CupDispenser.o src/CupDispenser.cpp
 
 ${OBJECTDIR}/src/Machine.o: src/Machine.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

@@ -29,6 +29,8 @@ int main(int argc, char** argv) {
     
     Machine* machine = new Machine();
     machine->connect();
+    
+    delete machine;
 
     return 0;
 }

@@ -1,6 +1,6 @@
 /* 
  * File:   LoadingState.hpp
- * Author: vsiplichuk <vsiplichuk at atncorp.com>
+ * Author: vitaliy
  *
  * Created on July 20, 2017, 5:35 PM
  */

@@ -1,6 +1,6 @@
 /* 
  * File:   SaleReady.hpp
- * Author: vsiplichuk <vsiplichuk at atncorp.com>
+ * Author: vitaliy
  *
  * Created on July 20, 2017, 7:14 PM
  */

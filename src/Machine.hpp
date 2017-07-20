@@ -1,6 +1,6 @@
 /* 
  * File:   Machine.hpp
- * Author: vsiplichuk <vsiplichuk at atncorp.com>
+ * Author: Vitaliy
  *
  * Created on July 20, 2017, 4:07 PM
  */
@@ -15,14 +15,18 @@
 class VMState;
 class LoadingState;
 class SaleReadyState;
+class CupDispenser;
 
 class Machine {
     friend class VMState;
 private:
     VMState* state;
+protected:
+    CupDispenser* pCupdispenser;
+    
     
 public:
-    class NotSupported : public std::exception { };
+    class NotSupported : public std::exception {  };
     
     Machine() : state( LoadingState::getInstance() ) {
     }
@@ -51,6 +55,7 @@ public:
             stop();
         } catch( const NotSupported& e ) {
             // Exception handling
+            std::cout << "Exeption in connect destructor" << std::endl;
             
         } catch( ... ) {
             // Exception handling

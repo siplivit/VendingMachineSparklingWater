@@ -26,6 +26,7 @@ public:
     class NotSupported : public std::exception { };
     
     virtual void connect( Machine* m ) {
+        std::cout << "Exeption in connect function" << std::endl;
         throw NotSupported();
     }
 
