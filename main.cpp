@@ -15,6 +15,10 @@
 
 #include "src/Pump.hpp"
 #include "src/SyrupPump.hpp"
+#include "src/Machine.hpp"
+#include "src/MachineStates/LoadingState.hpp"
+#include "src/MachineStates/SaleReadyState.hpp"
+#include "src/MachineStates/VMState.hpp"
 
 using namespace std;
 
@@ -22,6 +26,9 @@ using namespace std;
  * 
  */
 int main(int argc, char** argv) {
+    
+    Machine* machine = new Machine();
+    machine->connect();
 
     return 0;
 }

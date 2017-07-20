@@ -4,10 +4,14 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>src/MachineStates/LoadingState.hpp</itemPath>
+      <itemPath>src/Machine.hpp</itemPath>
       <itemPath>src/Product.hpp</itemPath>
       <itemPath>src/Pump.hpp</itemPath>
+      <itemPath>src/MachineStates/SaleReadyState.hpp</itemPath>
       <itemPath>src/Syrup.hpp</itemPath>
       <itemPath>src/SyrupPump.hpp</itemPath>
+      <itemPath>src/MachineStates/VMState.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -16,10 +20,14 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>src/MachineStates/LoadingState.cpp</itemPath>
+      <itemPath>src/Machine.cpp</itemPath>
       <itemPath>src/Product.cpp</itemPath>
       <itemPath>src/Pump.cpp</itemPath>
+      <itemPath>src/MachineStates/SaleReadyState.cpp</itemPath>
       <itemPath>src/Syrup.cpp</itemPath>
       <itemPath>src/SyrupPump.cpp</itemPath>
+      <itemPath>src/MachineStates/VMState.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -45,6 +53,28 @@
       <compileType>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Machine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Machine.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/MachineStates/LoadingState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MachineStates/LoadingState.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/MachineStates/SaleReadyState.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/MachineStates/SaleReadyState.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/MachineStates/VMState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MachineStates/VMState.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/Product.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -84,6 +114,28 @@
         </asmTool>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Machine.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Machine.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/MachineStates/LoadingState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MachineStates/LoadingState.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/MachineStates/SaleReadyState.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/MachineStates/SaleReadyState.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/MachineStates/VMState.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MachineStates/VMState.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/Product.cpp" ex="false" tool="1" flavor2="0">
       </item>

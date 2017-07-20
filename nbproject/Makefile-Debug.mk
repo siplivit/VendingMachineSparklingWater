@@ -36,6 +36,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/src/Machine.o \
+	${OBJECTDIR}/src/MachineStates/LoadingState.o \
+	${OBJECTDIR}/src/MachineStates/SaleReadyState.o \
+	${OBJECTDIR}/src/MachineStates/VMState.o \
 	${OBJECTDIR}/src/Product.o \
 	${OBJECTDIR}/src/Pump.o \
 	${OBJECTDIR}/src/Syrup.o \
@@ -70,6 +74,26 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/src/Machine.o: src/Machine.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Machine.o src/Machine.cpp
+
+${OBJECTDIR}/src/MachineStates/LoadingState.o: src/MachineStates/LoadingState.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/MachineStates
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MachineStates/LoadingState.o src/MachineStates/LoadingState.cpp
+
+${OBJECTDIR}/src/MachineStates/SaleReadyState.o: src/MachineStates/SaleReadyState.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/MachineStates
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MachineStates/SaleReadyState.o src/MachineStates/SaleReadyState.cpp
+
+${OBJECTDIR}/src/MachineStates/VMState.o: src/MachineStates/VMState.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/MachineStates
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MachineStates/VMState.o src/MachineStates/VMState.cpp
 
 ${OBJECTDIR}/src/Product.o: src/Product.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
