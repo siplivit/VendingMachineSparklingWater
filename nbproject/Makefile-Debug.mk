@@ -74,52 +74,52 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/vendingmachinesparklingwater: ${OBJEC
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/src/CupDispenser.o: src/CupDispenser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CupDispenser.o src/CupDispenser.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CupDispenser.o src/CupDispenser.cpp
 
 ${OBJECTDIR}/src/Machine.o: src/Machine.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Machine.o src/Machine.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Machine.o src/Machine.cpp
 
 ${OBJECTDIR}/src/MachineStates/LoadingState.o: src/MachineStates/LoadingState.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/MachineStates
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MachineStates/LoadingState.o src/MachineStates/LoadingState.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MachineStates/LoadingState.o src/MachineStates/LoadingState.cpp
 
 ${OBJECTDIR}/src/MachineStates/SaleReadyState.o: src/MachineStates/SaleReadyState.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/MachineStates
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MachineStates/SaleReadyState.o src/MachineStates/SaleReadyState.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MachineStates/SaleReadyState.o src/MachineStates/SaleReadyState.cpp
 
 ${OBJECTDIR}/src/MachineStates/VMState.o: src/MachineStates/VMState.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/MachineStates
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MachineStates/VMState.o src/MachineStates/VMState.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MachineStates/VMState.o src/MachineStates/VMState.cpp
 
 ${OBJECTDIR}/src/Product.o: src/Product.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Product.o src/Product.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Product.o src/Product.cpp
 
 ${OBJECTDIR}/src/Pump.o: src/Pump.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Pump.o src/Pump.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Pump.o src/Pump.cpp
 
 ${OBJECTDIR}/src/Syrup.o: src/Syrup.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Syrup.o src/Syrup.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Syrup.o src/Syrup.cpp
 
 ${OBJECTDIR}/src/SyrupPump.o: src/SyrupPump.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SyrupPump.o src/SyrupPump.cpp
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SyrupPump.o src/SyrupPump.cpp
 
 # Subprojects
 .build-subprojects:

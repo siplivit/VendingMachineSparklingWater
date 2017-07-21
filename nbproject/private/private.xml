@@ -7,15 +7,24 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/SyrupPump.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Pump.hpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/VMState.cpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/LoadingState.cpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Syrup.hpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Product.cpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/VMState.hpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/LoadingState.hpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/CupDispenser.hpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/CupDispenser.cpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/SaleReadyState.hpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/SyrupPump.hpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/main.cpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Pump.cpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Syrup.cpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/SaleReadyState.cpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/SyrupPump.cpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Machine.cpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Product.hpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Machine.hpp</file>
         </group>
     </open-files>
 </project-private>
