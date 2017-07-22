@@ -9,12 +9,14 @@
         <group>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/VMState.cpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/LoadingState.cpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/libs/json/src/json.hpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/SettingsManager.hpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Pump.hpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Syrup.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Product.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/VMState.hpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/LoadingState.hpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/CupDispenser.hpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/CupDispenser.cpp</file>
+            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Set.h</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/SaleReadyState.hpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/SyrupPump.hpp</file>
             <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/main.cpp</file>

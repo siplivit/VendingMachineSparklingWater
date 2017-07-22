@@ -28,7 +28,6 @@ protected:
     int state;
     int flowRate;   // ml/min
 public:
-    //Pump();
     Pump(int = 0, int = 0, std::string s = "", int = 0, int = 0);
     
     virtual int init(void) = 0;
