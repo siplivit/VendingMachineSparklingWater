@@ -20,6 +20,7 @@
 #include "src/MachineStates/LoadingState.hpp"
 #include "src/MachineStates/SaleReadyState.hpp"
 #include "src/MachineStates/VMState.hpp"
+#include "src/SettingsManager.hpp"
 
 #include "libs/json/src/json.hpp"
 
