@@ -14,5 +14,18 @@
         "currency": "грн.",
         "value": 42.99
     },
-    "pi": 3.141
+    "pi": 3.141,
+    
+    
+
+    "settings_general":{
+        "currency": "EUR",
+        "languageID": 2
+    },
+    "cupDisp":{
+        "cupTubesAmount": 6,
+        "cupDropTime": 10,
+        "cupDropSensorEnableFlg": true
+    }
+
 }

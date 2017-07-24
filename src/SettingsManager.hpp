@@ -15,6 +15,9 @@
 #define SETTINGSMANAGER_HPP
 
 #include <vector>
+#include "../libs/json/src/json.hpp"
+
+using json = nlohmann::json;
 
 namespace myjsonns {
 #define MACHINE_MODEL   "Freshmatic 1-65"
@@ -69,9 +72,9 @@ namespace myjsonns {
     } settings_syrup_t;
 
     typedef struct cupDisp_t_ {
-        uint8_t cupTubesAmount; // Количество туб со стаканами
+        int cupTubesAmount; // Количество туб со стаканами
 #define CUPTUBEAMOUNT_DEFAULT           6
-        uint8_t cupDropTime; // Время падения стакана в с(секундах) (при включённом датчике выдачи стаканов, если за это время стакан не появился - выдать ошибку. При выключенном датчике - задержка перед наливом воды).
+        int cupDropTime; // Время падения стакана в с(секундах) (при включённом датчике выдачи стаканов, если за это время стакан не появился - выдать ошибку. При выключенном датчике - задержка перед наливом воды).
 #define  CUPDROPTIME_DEFAULT            10
         bool cupDropSensorEnableFlg; // Использовать датчик выдачи стаканов
 #define CUPDROPSENSORENABLEFLG_DEFAULT  true
@@ -91,6 +94,15 @@ namespace myjsonns {
         cupDisp_t cupDisp;
     }settings_t;
 }
+
+
+
+namespace myjsonns {
+    void to_json(json& j, const settings_t& p);
+    void from_json(const json& j, settings_t& p);
+    void printSettings(settings_t& s);
+}
+
 
 
 class SettingsManager {

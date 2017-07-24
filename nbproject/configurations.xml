@@ -28,6 +28,7 @@
       <itemPath>src/Product.cpp</itemPath>
       <itemPath>src/Pump.cpp</itemPath>
       <itemPath>src/MachineStates/SaleReadyState.cpp</itemPath>
+      <itemPath>src/SettingsManager.cpp</itemPath>
       <itemPath>src/Syrup.cpp</itemPath>
       <itemPath>src/SyrupPump.cpp</itemPath>
       <itemPath>src/MachineStates/VMState.cpp</itemPath>
@@ -101,6 +102,8 @@
       </item>
       <item path="src/Pump.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/SettingsManager.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/SettingsManager.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/Syrup.cpp" ex="false" tool="1" flavor2="0">
@@ -171,6 +174,8 @@
       <item path="src/Pump.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Pump.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/SettingsManager.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/SettingsManager.hpp" ex="false" tool="3" flavor2="0">
       </item>

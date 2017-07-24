@@ -43,6 +43,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/MachineStates/VMState.o \
 	${OBJECTDIR}/src/Product.o \
 	${OBJECTDIR}/src/Pump.o \
+	${OBJECTDIR}/src/SettingsManager.o \
 	${OBJECTDIR}/src/Syrup.o \
 	${OBJECTDIR}/src/SyrupPump.o
 
@@ -110,6 +111,11 @@ ${OBJECTDIR}/src/Pump.o: src/Pump.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Pump.o src/Pump.cpp
+
+${OBJECTDIR}/src/SettingsManager.o: src/SettingsManager.cpp
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SettingsManager.o src/SettingsManager.cpp
 
 ${OBJECTDIR}/src/Syrup.o: src/Syrup.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
