@@ -24,12 +24,36 @@ namespace myjsonns {
     }
 
     void from_json(const json& j, settings_t& p) {
+        
+        if (j.find("settings_general") != j.end()) {
+            p.settings_general.currency = j["settings_general"].value("currency", CURRENCY_DEFAULT);
+            p.settings_general.languageID = j["settings_general"].value("languageID", LANGUAGEID_DEFAULT);
+ 
+        } else {
+            p.settings_general.currency = CURRENCY_DEFAULT;
+            p.settings_general.languageID = LANGUAGEID_DEFAULT;
+        }
+        p.settings_general.products_amount = PRODUCTS_AMOUNT;
+        
+        
+        if (j.find("cupDisp") != j.end()) {
+            p.cupDisp.cupTubesAmount = j["cupDisp"].value("cupTubesAmount", CUPTUBEAMOUNT_DEFAULT);
+            p.cupDisp.cupDropTime = j["cupDisp"].value("cupDropTime", CUPDROPTIME_DEFAULT);
+            p.cupDisp.cupDropSensorEnableFlg = j["cupDisp"].value("cupDropSensorEnableFlg", CUPDROPSENSORENABLEFLG_DEFAULT);
+ 
+        } else {
+            p.cupDisp.cupTubesAmount = CUPTUBEAMOUNT_DEFAULT;
+            p.cupDisp.cupDropTime = CUPDROPTIME_DEFAULT;
+            p.cupDisp.cupDropSensorEnableFlg = CUPDROPSENSORENABLEFLG_DEFAULT;
+        }
+ /*       
         p.settings_general.currency = j["settings_general"]["currency"].get<std::string>();
         p.settings_general.languageID = j["settings_general"]["languageID"].get<int>();
         p.settings_general.products_amount = PRODUCTS_AMOUNT;
         p.cupDisp.cupTubesAmount = j["cupDisp"]["cupTubesAmount"].get<int>();
         p.cupDisp.cupDropTime = j["cupDisp"]["cupDropTime"].get<int>();
         p.cupDisp.cupDropSensorEnableFlg = j["cupDisp"]["cupDropSensorEnableFlg"].get<bool>();
+*/       
     }
 
 void printSettings(settings_t& s) {

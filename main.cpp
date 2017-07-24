@@ -34,22 +34,27 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
-    std::ifstream i("test.json");
-    json j = json::parse(i);
     
-    std::cout << std::setw(4) << j << std::endl;
-    
+    json j;
+    std::ifstream input_file("settings.json");
+    try{
+        j = json::parse(input_file);
+    } catch (...) {
+        j = json({});
+    }
     myjsonns::settings_t settings = j;
     
     printSettings(settings);
     
-    std::ofstream o("test1.json");
+    std::ofstream output_file("settings.json");
     json j_out = settings;
-    o << std::setw(4) << j_out;
+    output_file << std::setw(4) << j_out;
 
+    
+    
+    
     Machine* machine = new Machine();
     machine->connect();
-
     delete machine;
 
     return 0;

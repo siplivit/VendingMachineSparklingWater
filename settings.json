@@ -1,31 +1,12 @@
 {
-    "answer": {
-        "everything": 42
-    },
-    "happy": true,
-    "list": [
-        1,
-        0,
-        2
-    ],
-    "name": "Niels",
-    "nothing": null,
-    "object": {
-        "currency": "грн.",
-        "value": 42.99
-    },
-    "pi": 3.141,
-    
-    
-
-    "settings_general":{
-        "currency": "EUR",
-        "languageID": 2
-    },
-    "cupDisp":{
-        "cupTubesAmount": 6,
+    "cupDisp": {
+        "cupDropSensorEnableFlg": true,
         "cupDropTime": 10,
-        "cupDropSensorEnableFlg": true
+        "cupTubesAmount": 6
+    },
+    "settings_general": {
+        "currency": "EUR",
+        "languageID": 2,
+        "products_amount": 6
     }
-
 }
