@@ -44,6 +44,8 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>src/MachineStates/settings1.json</itemPath>
+    <itemPath>test.json</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -54,6 +56,9 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <standard>10</standard>
+        </cTool>
         <ccTool>
           <standard>8</standard>
         </ccTool>
@@ -86,6 +91,8 @@
       </item>
       <item path="src/MachineStates/VMState.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/MachineStates/settings1.json" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/Product.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Product.hpp" ex="false" tool="3" flavor2="0">
@@ -103,6 +110,8 @@
       <item path="src/SyrupPump.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/SyrupPump.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test.json" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -153,6 +162,8 @@
       </item>
       <item path="src/MachineStates/VMState.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/MachineStates/settings1.json" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/Product.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Product.hpp" ex="false" tool="3" flavor2="0">
@@ -170,6 +181,8 @@
       <item path="src/SyrupPump.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/SyrupPump.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="test.json" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

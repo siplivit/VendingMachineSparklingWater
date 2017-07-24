@@ -1,0 +1,11 @@
+{
+    "settings_general":{
+        "currency": "EUR",
+        "languageID": 2
+    },
+    "cupDisp":{
+        "cupTubesAmount": 6,
+        "cupDropTime": 10,
+        "cupDropSensorEnableFlg": true
+    }
+}
