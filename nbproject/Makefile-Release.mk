@@ -36,6 +36,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/src/Controller/Common/CommonLogic.o \
+	${OBJECTDIR}/src/Controller/Common/sm/CommonSM.o \
+	${OBJECTDIR}/src/Controller/Common/sm/events/Events.o \
+	${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o \
+	${OBJECTDIR}/src/Controller/VendingMachineController.o \
 	${OBJECTDIR}/src/CupDispenser.o \
 	${OBJECTDIR}/src/Machine.o \
 	${OBJECTDIR}/src/MachineStates/LoadingState.o \
@@ -76,6 +81,31 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/src/Controller/Common/CommonLogic.o: src/Controller/Common/CommonLogic.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/CommonLogic.o src/Controller/Common/CommonLogic.cpp
+
+${OBJECTDIR}/src/Controller/Common/sm/CommonSM.o: src/Controller/Common/sm/CommonSM.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common/sm
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/CommonSM.o src/Controller/Common/sm/CommonSM.cpp
+
+${OBJECTDIR}/src/Controller/Common/sm/events/Events.o: src/Controller/Common/sm/events/Events.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common/sm/events
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/events/Events.o src/Controller/Common/sm/events/Events.cpp
+
+${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o: src/Controller/Common/sm/states/Idle.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common/sm/states
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o src/Controller/Common/sm/states/Idle.cpp
+
+${OBJECTDIR}/src/Controller/VendingMachineController.o: src/Controller/VendingMachineController.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/Controller
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/VendingMachineController.o src/Controller/VendingMachineController.cpp
 
 ${OBJECTDIR}/src/CupDispenser.o: src/CupDispenser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

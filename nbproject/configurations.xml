@@ -4,16 +4,25 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>src/Controller/Common/CommonLogic.hpp</itemPath>
+      <itemPath>src/Controller/Common/sm/CommonSM.hpp</itemPath>
       <itemPath>src/CupDispenser.hpp</itemPath>
+      <itemPath>src/Controller/Common/sm/states/Error.hpp</itemPath>
+      <itemPath>src/Controller/Common/sm/events/Events.hpp</itemPath>
+      <itemPath>src/Controller/Common/sm/states/Idle.hpp</itemPath>
       <itemPath>src/MachineStates/LoadingState.hpp</itemPath>
       <itemPath>src/Machine.hpp</itemPath>
+      <itemPath>src/Controller/Common/sm/states/Menu.hpp</itemPath>
       <itemPath>src/Product.hpp</itemPath>
       <itemPath>src/Pump.hpp</itemPath>
       <itemPath>src/MachineStates/SaleReadyState.hpp</itemPath>
+      <itemPath>src/Controller/Common/sm/states/Selling.hpp</itemPath>
       <itemPath>src/SettingsManager.hpp</itemPath>
       <itemPath>src/Syrup.hpp</itemPath>
       <itemPath>src/SyrupPump.hpp</itemPath>
       <itemPath>src/MachineStates/VMState.hpp</itemPath>
+      <itemPath>src/Controller/VendingMachineController.hpp</itemPath>
+      <itemPath>src/Controller/Common/sm/states/states.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -22,7 +31,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>src/Controller/Common/CommonLogic.cpp</itemPath>
+      <itemPath>src/Controller/Common/sm/CommonSM.cpp</itemPath>
       <itemPath>src/CupDispenser.cpp</itemPath>
+      <itemPath>src/Controller/Common/sm/events/Events.cpp</itemPath>
+      <itemPath>src/Controller/Common/sm/states/Idle.cpp</itemPath>
       <itemPath>src/MachineStates/LoadingState.cpp</itemPath>
       <itemPath>src/Machine.cpp</itemPath>
       <itemPath>src/Product.cpp</itemPath>
@@ -32,6 +45,7 @@
       <itemPath>src/Syrup.cpp</itemPath>
       <itemPath>src/SyrupPump.cpp</itemPath>
       <itemPath>src/MachineStates/VMState.cpp</itemPath>
+      <itemPath>src/Controller/VendingMachineController.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -65,6 +79,76 @@
         </ccTool>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Controller/Common/CommonLogic.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/CommonLogic.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/CommonSM.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/CommonSM.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/events/Events.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/events/Events.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Error.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Idle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Idle.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Menu.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Selling.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/states.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/VendingMachineController.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/VendingMachineController.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="src/CupDispenser.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -138,6 +222,76 @@
         </asmTool>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Controller/Common/CommonLogic.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/CommonLogic.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/CommonSM.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/CommonSM.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/events/Events.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/events/Events.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Error.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Idle.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Idle.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Menu.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/Selling.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/Common/sm/states/states.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/VendingMachineController.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/Controller/VendingMachineController.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="src/CupDispenser.cpp" ex="false" tool="1" flavor2="0">
       </item>

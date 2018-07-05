@@ -13,6 +13,7 @@
 
 #include <cstdlib>
 #include <fstream>
+#include <iostream>
 
 #include "src/Pump.hpp"
 #include "src/SyrupPump.hpp"
@@ -24,39 +25,56 @@
 
 #include "libs/json/src/json.hpp"
 
+#include <boost/statechart/transition.hpp>
+#include <boost/context/all.hpp>
+#include <boost/statechart/custom_reaction.hpp>
+
+#include "src/Controller/VendingMachineController.hpp"
+//#include "src/Controller/Common/CommonLogic.hpp"
+
 using json = nlohmann::json;
 
 using namespace myjsonns;
 using namespace std;
 
+
+
+int main(int argc, char** argv)
+{
+    VendingMachineController controller;//(/*std::make_shared<CommonLogic>()*/);
+    
+    controller.onTestEvent();
+}
+
+
 /*
  * 
  */
-int main(int argc, char** argv) {
-
-    
-    json j;
-    std::ifstream input_file("settings.json");
-    try{
-        j = json::parse(input_file);
-    } catch (...) {
-        j = json({});
-    }
-    myjsonns::settings_t settings = j;
-    
-    printSettings(settings);
-    
-    std::ofstream output_file("settings.json");
-    json j_out = settings;
-    output_file << std::setw(4) << j_out;
-
-    
-    
-    
-    Machine* machine = new Machine();
-    machine->connect();
-    delete machine;
-
-    return 0;
-}
+//int main(int argc, char** argv) {
+//
+//    
+//    json j;
+//    std::ifstream input_file("settings.json");
+//    try{
+//        j = json::parse(input_file);
+//    } catch (...) {
+//        j = json({});
+//    }
+//    myjsonns::settings_t settings = j;
+//    
+//    printSettings(settings);
+//    
+//    std::ofstream output_file("settings.json");
+//    json j_out = settings;
+//    output_file << std::setw(4) << j_out;
+//
+//    
+//    
+//    
+//    Machine* machine = new Machine();
+//    machine->connect();
+//    delete machine;
+//
+//    return 0;
+//}
 

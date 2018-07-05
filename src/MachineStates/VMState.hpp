@@ -1,6 +1,6 @@
 /* 
  * File:   VMState.hpp
- * Author: vsiplichuk <vsiplichuk at atncorp.com>
+ * Author: vitalii
  *
  * Created on July 20, 2017, 4:11 PM
  */
