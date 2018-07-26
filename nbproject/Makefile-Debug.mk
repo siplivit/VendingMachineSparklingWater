@@ -50,7 +50,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/Pump.o \
 	${OBJECTDIR}/src/SettingsManager.o \
 	${OBJECTDIR}/src/Syrup.o \
-	${OBJECTDIR}/src/SyrupPump.o
+	${OBJECTDIR}/src/SyrupPump.o \
+	${OBJECTDIR}/src/practice/list/listclass.o
 
 
 # C Compiler Flags
@@ -156,6 +157,11 @@ ${OBJECTDIR}/src/SyrupPump.o: src/SyrupPump.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SyrupPump.o src/SyrupPump.cpp
+
+${OBJECTDIR}/src/practice/list/listclass.o: src/practice/list/listclass.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/practice/list
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/practice/list/listclass.o src/practice/list/listclass.cpp
 
 # Subprojects
 .build-subprojects:

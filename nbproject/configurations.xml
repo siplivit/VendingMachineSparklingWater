@@ -22,6 +22,7 @@
       <itemPath>src/SyrupPump.hpp</itemPath>
       <itemPath>src/MachineStates/VMState.hpp</itemPath>
       <itemPath>src/Controller/VendingMachineController.hpp</itemPath>
+      <itemPath>src/practice/list/listclass.hpp</itemPath>
       <itemPath>src/Controller/Common/sm/states/states.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -46,6 +47,7 @@
       <itemPath>src/SyrupPump.cpp</itemPath>
       <itemPath>src/MachineStates/VMState.cpp</itemPath>
       <itemPath>src/Controller/VendingMachineController.cpp</itemPath>
+      <itemPath>src/practice/list/listclass.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -198,6 +200,10 @@
       </item>
       <item path="src/SyrupPump.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/practice/list/listclass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/practice/list/listclass.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="test.json" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
@@ -340,6 +346,10 @@
       <item path="src/SyrupPump.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/SyrupPump.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/practice/list/listclass.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/practice/list/listclass.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="test.json" ex="false" tool="3" flavor2="0">
       </item>

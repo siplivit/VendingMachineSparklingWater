@@ -7,26 +7,47 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/VMState.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/LoadingState.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/libs/json/src/json.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/SettingsManager.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Pump.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Syrup.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/LoadingState.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/CupDispenser.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/CupDispenser.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Set.h</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/SaleReadyState.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/SyrupPump.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/main.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Pump.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Syrup.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/MachineStates/SaleReadyState.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/SyrupPump.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Machine.cpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Product.hpp</file>
-            <file>file:/home/vitaliy/NetbeansDev/projects/VendingMachineSparklingWater/src/Machine.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/main.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/Makefile</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/.gitignore</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/CupDispenser.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Set.h</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/SettingsManager.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/states/Selling.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/CupDispenser.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/SyrupPump.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/SyrupPump.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Pump.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/CommonSM.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/CommonLogic.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/MachineStates/SaleReadyState.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/CommonSM.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Pump.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/MachineStates/SaleReadyState.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/states/Error.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Product.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/events/Events.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Syrup.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/VendingMachineController.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/nbproject/private/configurations.xml</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/states/Idle.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/events/Events.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/VendingMachineController.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/nbproject/private/Makefile-variables.mk</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/CommonLogic.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/nbproject/Package-Release.bash</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Syrup.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/MachineStates/VMState.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Machine.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/states/states.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/MachineStates/LoadingState.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/MachineStates/LoadingState.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/MachineStates/VMState.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/states/Menu.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Product.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Machine.cpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/nbproject/private/c_standard_headers_indexer.c</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/states/Idle.hpp</file>
         </group>
     </open-files>
 </project-private>

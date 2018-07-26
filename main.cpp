@@ -32,6 +32,8 @@
 #include "src/Controller/VendingMachineController.hpp"
 //#include "src/Controller/Common/CommonLogic.hpp"
 
+#include "src/practice/list/listclass.hpp"
+
 using json = nlohmann::json;
 
 using namespace myjsonns;
@@ -41,9 +43,25 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-    VendingMachineController controller;//(/*std::make_shared<CommonLogic>()*/);
+    MyOneWayList<int> myList;
     
-    controller.onTestEvent();
+    int numbersCount;
+    cin >> numbersCount;
+    
+    for(int i = 0; i < numbersCount; i++)
+    {
+        myList.push_back(rand() % 10);
+    }
+    
+    for(int i = 0; i < myList.getSize(); i++)
+    {
+        cout << myList[i] << endl;
+    }
+    
+    
+//    setlocale(LC_ALL, "ru");
+//    VendingMachineController controller;//(/*std::make_shared<CommonLogic>()*/);
+//    controller.onTestEvent();
 }
 
 
