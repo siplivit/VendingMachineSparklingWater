@@ -17,10 +17,10 @@
 
 #include "src/Pump.hpp"
 #include "src/SyrupPump.hpp"
-#include "src/Machine.hpp"
-#include "src/MachineStates/LoadingState.hpp"
-#include "src/MachineStates/SaleReadyState.hpp"
-#include "src/MachineStates/VMState.hpp"
+//#include "src/Machine.hpp"
+//#include "src/MachineStates/LoadingState.hpp"
+//#include "src/MachineStates/SaleReadyState.hpp"
+//#include "src/MachineStates/VMState.hpp"
 #include "src/SettingsManager.hpp"
 
 #include "libs/json/src/json.hpp"
@@ -41,58 +41,37 @@ using namespace std;
 
 
 
-int main(int argc, char** argv)
-{
-    MyOneWayList<int> myList;
-    
-    int numbersCount;
-    cin >> numbersCount;
-    
-    for(int i = 0; i < numbersCount; i++)
-    {
-        myList.push_back(rand() % 10);
-    }
-    
-    for(int i = 0; i < myList.getSize(); i++)
-    {
-        cout << myList[i] << endl;
-    }
-    
-    
+//int main(int argc, char** argv)
+//{
 //    setlocale(LC_ALL, "ru");
-//    VendingMachineController controller;//(/*std::make_shared<CommonLogic>()*/);
+//    VendingMachineController controller;
 //    controller.onTestEvent();
-}
+//}
 
 
 /*
  * 
  */
-//int main(int argc, char** argv) {
-//
-//    
-//    json j;
-//    std::ifstream input_file("settings.json");
-//    try{
-//        j = json::parse(input_file);
-//    } catch (...) {
-//        j = json({});
-//    }
-//    myjsonns::settings_t settings = j;
-//    
-//    printSettings(settings);
-//    
-//    std::ofstream output_file("settings.json");
-//    json j_out = settings;
-//    output_file << std::setw(4) << j_out;
-//
-//    
-//    
-//    
-//    Machine* machine = new Machine();
-//    machine->connect();
-//    delete machine;
-//
-//    return 0;
-//}
+int main(int argc, char** argv)
+{
+    json j;
+    std::ifstream input_file("db/settings.json");
+    try{
+        j = json::parse(input_file);
+    } catch (...) {
+        j = json({});
+    }
+    myjsonns::settings_t settings = j;
+    
+    printSettings(settings);
+    
+    std::ofstream output_file("db/settings.json");
+    json j_out = settings;
+    output_file << std::setw(4) << j_out;
+
+    
+    
+   
+    return 0;
+}
 

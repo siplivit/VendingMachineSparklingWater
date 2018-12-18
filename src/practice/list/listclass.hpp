@@ -161,4 +161,19 @@ private:
 };
 
 
-
+/*
+     MyOneWayList<int> myList;
+    
+    int numbersCount;
+    cin >> numbersCount;
+    
+    for(int i = 0; i < numbersCount; i++)
+    {
+        myList.push_back(rand() % 10);
+    }
+    
+    for(int i = 0; i < myList.getSize(); i++)
+    {
+        cout << myList[i] << endl;
+    }
+ */
