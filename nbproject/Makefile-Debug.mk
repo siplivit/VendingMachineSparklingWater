@@ -42,6 +42,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o \
 	${OBJECTDIR}/src/Controller/VendingMachineController.o \
 	${OBJECTDIR}/src/CupDispenser.o \
+	${OBJECTDIR}/src/PersistenceManager/JsonFilePersistence.o \
+	${OBJECTDIR}/src/PersistenceManager/PersistenceManager.o \
 	${OBJECTDIR}/src/Product.o \
 	${OBJECTDIR}/src/Pump.o \
 	${OBJECTDIR}/src/SettingsManager.o \
@@ -77,67 +79,77 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/vendingmachinesparklingwater: ${OBJEC
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/src/Controller/Common/CommonLogic.o: src/Controller/Common/CommonLogic.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/CommonLogic.o src/Controller/Common/CommonLogic.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/CommonLogic.o src/Controller/Common/CommonLogic.cpp
 
 ${OBJECTDIR}/src/Controller/Common/sm/CommonSM.o: src/Controller/Common/sm/CommonSM.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common/sm
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/CommonSM.o src/Controller/Common/sm/CommonSM.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/CommonSM.o src/Controller/Common/sm/CommonSM.cpp
 
 ${OBJECTDIR}/src/Controller/Common/sm/events/Events.o: src/Controller/Common/sm/events/Events.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common/sm/events
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/events/Events.o src/Controller/Common/sm/events/Events.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/events/Events.o src/Controller/Common/sm/events/Events.cpp
 
 ${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o: src/Controller/Common/sm/states/Idle.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common/sm/states
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o src/Controller/Common/sm/states/Idle.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o src/Controller/Common/sm/states/Idle.cpp
 
 ${OBJECTDIR}/src/Controller/VendingMachineController.o: src/Controller/VendingMachineController.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/Controller
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/VendingMachineController.o src/Controller/VendingMachineController.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/VendingMachineController.o src/Controller/VendingMachineController.cpp
 
 ${OBJECTDIR}/src/CupDispenser.o: src/CupDispenser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CupDispenser.o src/CupDispenser.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CupDispenser.o src/CupDispenser.cpp
+
+${OBJECTDIR}/src/PersistenceManager/JsonFilePersistence.o: src/PersistenceManager/JsonFilePersistence.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/PersistenceManager
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/PersistenceManager/JsonFilePersistence.o src/PersistenceManager/JsonFilePersistence.cpp
+
+${OBJECTDIR}/src/PersistenceManager/PersistenceManager.o: src/PersistenceManager/PersistenceManager.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/PersistenceManager
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/PersistenceManager/PersistenceManager.o src/PersistenceManager/PersistenceManager.cpp
 
 ${OBJECTDIR}/src/Product.o: src/Product.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Product.o src/Product.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Product.o src/Product.cpp
 
 ${OBJECTDIR}/src/Pump.o: src/Pump.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Pump.o src/Pump.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Pump.o src/Pump.cpp
 
 ${OBJECTDIR}/src/SettingsManager.o: src/SettingsManager.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SettingsManager.o src/SettingsManager.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SettingsManager.o src/SettingsManager.cpp
 
 ${OBJECTDIR}/src/Syrup.o: src/Syrup.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Syrup.o src/Syrup.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Syrup.o src/Syrup.cpp
 
 ${OBJECTDIR}/src/SyrupPump.o: src/SyrupPump.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SyrupPump.o src/SyrupPump.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SyrupPump.o src/SyrupPump.cpp
 
 ${OBJECTDIR}/src/practice/list/listclass.o: src/practice/list/listclass.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/practice/list
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/practice/list/listclass.o src/practice/list/listclass.cpp
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/practice/list/listclass.o src/practice/list/listclass.cpp
 
 # Subprojects
 .build-subprojects:

@@ -42,6 +42,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o \
 	${OBJECTDIR}/src/Controller/VendingMachineController.o \
 	${OBJECTDIR}/src/CupDispenser.o \
+	${OBJECTDIR}/src/PersistenceManager/JsonFilePersistence.o \
+	${OBJECTDIR}/src/PersistenceManager/PersistenceManager.o \
 	${OBJECTDIR}/src/Product.o \
 	${OBJECTDIR}/src/Pump.o \
 	${OBJECTDIR}/src/SettingsManager.o \
@@ -108,6 +110,16 @@ ${OBJECTDIR}/src/CupDispenser.o: src/CupDispenser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/CupDispenser.o src/CupDispenser.cpp
+
+${OBJECTDIR}/src/PersistenceManager/JsonFilePersistence.o: src/PersistenceManager/JsonFilePersistence.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/PersistenceManager
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/PersistenceManager/JsonFilePersistence.o src/PersistenceManager/JsonFilePersistence.cpp
+
+${OBJECTDIR}/src/PersistenceManager/PersistenceManager.o: src/PersistenceManager/PersistenceManager.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/PersistenceManager
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/PersistenceManager/PersistenceManager.o src/PersistenceManager/PersistenceManager.cpp
 
 ${OBJECTDIR}/src/Product.o: src/Product.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

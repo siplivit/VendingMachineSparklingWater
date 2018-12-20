@@ -9,11 +9,15 @@
       <itemPath>src/CupDispenser.hpp</itemPath>
       <itemPath>src/Controller/Common/sm/states/Error.hpp</itemPath>
       <itemPath>src/Controller/Common/sm/events/Events.hpp</itemPath>
+      <itemPath>src/PersistenceManager/IPersistenceOperations.hpp</itemPath>
       <itemPath>src/Controller/Common/sm/states/Idle.hpp</itemPath>
+      <itemPath>src/PersistenceManager/JsonFilePersistence.hpp</itemPath>
       <itemPath>src/Controller/Common/sm/states/Menu.hpp</itemPath>
+      <itemPath>src/PersistenceManager/PersistenceManager.hpp</itemPath>
       <itemPath>src/Product.hpp</itemPath>
       <itemPath>src/Pump.hpp</itemPath>
       <itemPath>src/Controller/Common/sm/states/Selling.hpp</itemPath>
+      <itemPath>src/Types/Settings.hpp</itemPath>
       <itemPath>src/SettingsManager.hpp</itemPath>
       <itemPath>src/Syrup.hpp</itemPath>
       <itemPath>src/SyrupPump.hpp</itemPath>
@@ -33,6 +37,8 @@
       <itemPath>src/CupDispenser.cpp</itemPath>
       <itemPath>src/Controller/Common/sm/events/Events.cpp</itemPath>
       <itemPath>src/Controller/Common/sm/states/Idle.cpp</itemPath>
+      <itemPath>src/PersistenceManager/JsonFilePersistence.cpp</itemPath>
+      <itemPath>src/PersistenceManager/PersistenceManager.cpp</itemPath>
       <itemPath>src/Product.cpp</itemPath>
       <itemPath>src/Pump.cpp</itemPath>
       <itemPath>src/SettingsManager.cpp</itemPath>
@@ -67,9 +73,11 @@
       <compileType>
         <cTool>
           <standard>10</standard>
+          <commandlineTool>gcc</commandlineTool>
         </cTool>
         <ccTool>
-          <standard>8</standard>
+          <standard>11</standard>
+          <commandlineTool>g++</commandlineTool>
         </ccTool>
       </compileType>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
@@ -150,6 +158,31 @@
       </item>
       <item path="src/MachineStates/settings1.json" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/PersistenceManager/IPersistenceOperations.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/PersistenceManager/JsonFilePersistence.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/PersistenceManager/JsonFilePersistence.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/PersistenceManager/PersistenceManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/PersistenceManager/PersistenceManager.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="src/Product.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Product.hpp" ex="false" tool="3" flavor2="0">
@@ -169,6 +202,8 @@
       <item path="src/SyrupPump.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/SyrupPump.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Types/Settings.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/practice/list/listclass.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -275,6 +310,31 @@
       </item>
       <item path="src/MachineStates/settings1.json" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/PersistenceManager/IPersistenceOperations.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/PersistenceManager/JsonFilePersistence.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/PersistenceManager/JsonFilePersistence.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="src/PersistenceManager/PersistenceManager.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="src/PersistenceManager/PersistenceManager.hpp"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="src/Product.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Product.hpp" ex="false" tool="3" flavor2="0">
@@ -294,6 +354,8 @@
       <item path="src/SyrupPump.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/SyrupPump.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Types/Settings.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/practice/list/listclass.cpp" ex="false" tool="1" flavor2="0">
       </item>

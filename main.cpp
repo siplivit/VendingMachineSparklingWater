@@ -6,7 +6,7 @@
 
 /* 
  * File:   main.cpp
- * Author: vitaliy
+ * Author: vitalii
  *
  * Created on July 20, 2017, 12:27 AM
  */
@@ -14,64 +14,33 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
+#include <memory>
 
-#include "src/Pump.hpp"
-#include "src/SyrupPump.hpp"
-//#include "src/Machine.hpp"
-//#include "src/MachineStates/LoadingState.hpp"
-//#include "src/MachineStates/SaleReadyState.hpp"
-//#include "src/MachineStates/VMState.hpp"
-#include "src/SettingsManager.hpp"
+//#include <boost/statechart/transition.hpp>
+//#include <boost/context/all.hpp>
+//#include <boost/statechart/custom_reaction.hpp>
 
-#include "libs/json/src/json.hpp"
+//#include "src/Controller/VendingMachineController.hpp"
+//#include "src/practice/list/listclass.hpp"
 
-#include <boost/statechart/transition.hpp>
-#include <boost/context/all.hpp>
-#include <boost/statechart/custom_reaction.hpp>
+#include "src/Types/Settings.hpp"
+#include "src/PersistenceManager/../PersistenceManager/PersistenceManager.hpp"
+#include "src/PersistenceManager/JsonFilePersistence.hpp"
 
-#include "src/Controller/VendingMachineController.hpp"
-//#include "src/Controller/Common/CommonLogic.hpp"
-
-#include "src/practice/list/listclass.hpp"
-
-using json = nlohmann::json;
-
-using namespace myjsonns;
-using namespace std;
-
-
-
-//int main(int argc, char** argv)
-//{
-//    setlocale(LC_ALL, "ru");
-//    VendingMachineController controller;
-//    controller.onTestEvent();
-//}
-
-
-/*
- * 
- */
 int main(int argc, char** argv)
 {
-    json j;
-    std::ifstream input_file("db/settings.json");
-    try{
-        j = json::parse(input_file);
-    } catch (...) {
-        j = json({});
-    }
-    myjsonns::settings_t settings = j;
+    setlocale(LC_ALL, "ru");
     
-    printSettings(settings);
+    Settings mySettings;
     
-    std::ofstream output_file("db/settings.json");
-    json j_out = settings;
-    output_file << std::setw(4) << j_out;
-
+    PersistenceManager pm(std::make_unique<JsonFilePersistence>("db/settings.json"));
     
+    pm.readSettings(mySettings);
     
-   
+    mySettings.cupDisp.cupTubesAmount++;
+    
+    pm.saveSettings(mySettings);
+ 
     return 0;
 }
 
