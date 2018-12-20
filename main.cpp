@@ -24,6 +24,7 @@
 //#include "src/practice/list/listclass.hpp"
 
 #include "src/Types/Settings.hpp"
+#include "src/Types/AccountingData.hpp"
 #include "src/PersistenceManager/../PersistenceManager/PersistenceManager.hpp"
 #include "src/PersistenceManager/JsonFilePersistence.hpp"
 
@@ -31,15 +32,19 @@ int main(int argc, char** argv)
 {
     setlocale(LC_ALL, "ru");
     
-    Settings mySettings;
+    PersistenceManager pm(std::make_unique<JsonFilePersistence>("db/Settings.json", "db/AccountingData.json"));
     
-    PersistenceManager pm(std::make_unique<JsonFilePersistence>("db/settings.json"));
+    Settings mySettings;
+    AccountingData myAccountingData;
     
     pm.readSettings(mySettings);
+    pm.readAccountingData(myAccountingData);
     
     mySettings.cupDisp.cupTubesAmount++;
+    myAccountingData.moneyIn++;
     
     pm.saveSettings(mySettings);
+    pm.saveAccountingData(myAccountingData);
  
     return 0;
 }

@@ -15,6 +15,7 @@
 #define IPERSISTENCEOPERATIONS_HPP
 
 #include "../Types/Settings.hpp"
+#include "../Types/AccountingData.hpp"
 
 using namespace settingstypes;
 
@@ -23,6 +24,9 @@ class IPersistenceOperations
 public:
     virtual bool readSettings(Settings& s) = 0;
     virtual bool saveSettings(const Settings& s) = 0;
+    
+    virtual bool readAccountingData(AccountingData& s) = 0;
+    virtual bool saveAccountingData(const AccountingData& s) = 0;
     
     virtual ~IPersistenceOperations(){}
 };

@@ -15,26 +15,27 @@ using json = nlohmann::json;
 using namespace std;
 
 
-JsonFilePersistence::JsonFilePersistence(const std::string& f)
-    : fileName(f)
+JsonFilePersistence::JsonFilePersistence(const std::string& settingsFileName_, const std::string& accountingDataFileName_)
+    : settingsFileName(settingsFileName_)
+    , accountingDataFileName(accountingDataFileName_)
 {
     
 }
 
 void JsonFilePersistence::setFileName(const std::string s)
 {
-    fileName = s;
+    settingsFileName = s;
 }
 
 std::string JsonFilePersistence::getFileName()
 {
-    return fileName;
+    return settingsFileName;
 }
 
 bool JsonFilePersistence::readSettings(Settings& s)
 {
     json j;
-    std::ifstream input_file(fileName);
+    std::ifstream input_file(settingsFileName);
     try{
         j = json::parse(input_file);
     } catch (...) {
@@ -45,7 +46,7 @@ bool JsonFilePersistence::readSettings(Settings& s)
 
 bool JsonFilePersistence::saveSettings(const Settings& s)
 {
-    std::ofstream output_file(fileName);
+    std::ofstream output_file(settingsFileName);
     json j_out = s;
     output_file << std::setw(4) << j_out;
 }
@@ -96,6 +97,57 @@ namespace settingstypes {
         p.cupDisp.cupDropTime = j["cupDisp"]["cupDropTime"].get<int>();
         p.cupDisp.cupDropSensorEnableFlg = j["cupDisp"]["cupDropSensorEnableFlg"].get<bool>();
 */       
+    }
+
+}
+
+bool JsonFilePersistence::readAccountingData(AccountingData& s)
+{
+    json j;
+    std::ifstream input_file(accountingDataFileName);
+    try{
+        j = json::parse(input_file);
+    } catch (...) {
+        j = json({});
+    }
+    s = j;
+}
+
+bool JsonFilePersistence::saveAccountingData(const AccountingData& s)
+{
+    std::ofstream output_file(accountingDataFileName);
+    json j_out = s;
+    output_file << std::setw(4) << j_out;
+}
+      
+namespace settingstypes {
+    
+    void to_json(json& j, const AccountingData& p) {
+        j = json{
+            {"AccountingData",{
+                {"MoneyIn", p.moneyIn},
+                {"MoneyOut", p.moneyOut},
+                {"Water", p.water},
+                {"Cups", p.cups}}}
+        };
+    }
+
+    void from_json(const json& j, AccountingData& p) {
+        
+        if (j.find("AccountingData") != j.end())
+        {
+            p.moneyIn = j["AccountingData"].value("MoneyIn", 0);
+            p.moneyOut= j["AccountingData"].value("MoneyOut", 0);
+            p.water = j["AccountingData"].value("Water", 0);
+            p.cups = j["AccountingData"].value("Cups", 0);
+        }
+        else
+        {
+            p.moneyIn = 0;
+            p.moneyOut = 0;
+            p.water = 0;
+            p.cups = 0;
+        }
     }
 
 }

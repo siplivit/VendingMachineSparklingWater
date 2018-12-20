@@ -27,3 +27,13 @@ bool PersistenceManager::saveSettings(const Settings& s)
 {
     persistence->saveSettings(s);
 }
+
+bool PersistenceManager::readAccountingData(AccountingData& s)
+{
+    persistence->readAccountingData(s);
+}
+
+bool PersistenceManager::saveAccountingData(const AccountingData& s)
+{
+    persistence->saveAccountingData(s);
+}

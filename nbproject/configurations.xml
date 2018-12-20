@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>src/Types/AccountingData.hpp</itemPath>
       <itemPath>src/Controller/Common/CommonLogic.hpp</itemPath>
       <itemPath>src/Controller/Common/sm/CommonSM.hpp</itemPath>
       <itemPath>src/CupDispenser.hpp</itemPath>
@@ -203,6 +204,8 @@
       </item>
       <item path="src/SyrupPump.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/Types/AccountingData.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="src/Types/Settings.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/practice/list/listclass.cpp" ex="false" tool="1" flavor2="0">
@@ -354,6 +357,8 @@
       <item path="src/SyrupPump.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/SyrupPump.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/Types/AccountingData.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/Types/Settings.hpp" ex="false" tool="3" flavor2="0">
       </item>

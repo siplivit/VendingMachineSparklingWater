@@ -18,6 +18,7 @@
 
 
 #include "../Types/Settings.hpp"
+#include "../Types/AccountingData.hpp"
 #include "IPersistenceOperations.hpp"
 
 using namespace std;
@@ -30,6 +31,9 @@ public:
     
     bool readSettings(Settings& s);
     bool saveSettings(const Settings& s);
+    
+    bool readAccountingData(AccountingData& s);
+    bool saveAccountingData(const AccountingData& s);
     
     std::unique_ptr<IPersistenceOperations> persistence;
 };

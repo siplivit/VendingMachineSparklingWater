@@ -21,6 +21,7 @@
 #include "IPersistenceOperations.hpp"
 #include "../../libs/json/src/json.hpp"
 #include "../Types/Settings.hpp"
+#include "../Types/AccountingData.hpp"
 
 using json = nlohmann::json;
 
@@ -30,16 +31,20 @@ class JsonFilePersistence : public IPersistenceOperations
 {
 public:
         
-    JsonFilePersistence(const std::string& f);
+    JsonFilePersistence(const std::string&, const std::string&);
                 
     bool readSettings(Settings& s) override;
     bool saveSettings(const Settings& s) override;
+    
+    bool readAccountingData(AccountingData& s) override;
+    bool saveAccountingData(const AccountingData& s) override;
     
     void setFileName(const std::string s);
     std::string getFileName();
 
 private:
-    std::string fileName;
+    std::string settingsFileName;
+    std::string accountingDataFileName;
 };
 
 namespace settingstypes {

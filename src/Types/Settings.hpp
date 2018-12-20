@@ -72,16 +72,6 @@ namespace settingstypes {
     #define CUPDROPSENSORENABLEFLG_DEFAULT  true
     };
 
-    struct Balance
-    {
-        int money_balance;              // Сумма принятых денег (баланс: сумма принятых - сумма выданной сдачи)т.е. та сумма, которая висит на экране в качестве принятых денег, коп.
-        //int bill_banknote_amount;     // Количество банкнот в купюроприёмнике, шт.
-        //int cashBoxCoins_amount;      // Количество монет в CASH BOX
-        int water_leftover;             // Остаток воды, мл
-        int cups_leftover;              // остаток стаканов, шт.
-        int syrup_leftover[5];          // Остаток сиропов, мл
-    };
-
     struct Settings
     {
         SettingsGeneral settings_general;
