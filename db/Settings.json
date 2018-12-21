@@ -2,7 +2,7 @@
     "cupDisp": {
         "cupDropSensorEnableFlg": true,
         "cupDropTime": 10,
-        "cupTubesAmount": 7
+        "cupTubesAmount": 109
     },
     "settings_general": {
         "currency": "EUR",

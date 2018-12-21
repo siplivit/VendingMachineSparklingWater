@@ -22,10 +22,10 @@ namespace settingstypes {
     
     struct Balance
     {
-        int moneyBalance;                   // Сумма принятых денег (баланс: сумма принятых - сумма выданной сдачи)т.е. та сумма, которая висит на экране в качестве принятых денег, коп.
-        int waterLeftover;                  // Остаток воды, мл
-        int cupsLeftover;                   // остаток стаканов, шт.
-        std::map<int, int> syrupLeftover;   // Остаток сиропов, мл
+        int money;                  // Сумма принятых денег (баланс: сумма принятых - сумма выданной сдачи)т.е. та сумма, которая висит на экране в качестве принятых денег, коп.
+        int water;                  // Остаток воды, мл
+        int cups;                   // остаток стаканов, шт.
+        std::map<int, int> syrups;  // Остаток сиропов, мл
     };
     
     struct AccountingData
@@ -35,7 +35,7 @@ namespace settingstypes {
         
         int water;                  // Wasted water, ml
         int cups;                   // wasted cups, pcs
-        //std::map<int, int> syrup;   // Wasted syrups, ml
+        std::map<int, int> syrups;  // Wasted syrups, ml
     };
 }
 

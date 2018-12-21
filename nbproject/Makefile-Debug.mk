@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/src/Application/Application.o \
 	${OBJECTDIR}/src/Controller/Common/CommonLogic.o \
 	${OBJECTDIR}/src/Controller/Common/sm/CommonSM.o \
 	${OBJECTDIR}/src/Controller/Common/sm/events/Events.o \
@@ -80,6 +81,11 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/src/Application/Application.o: src/Application/Application.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/Application
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Application/Application.o src/Application/Application.cpp
 
 ${OBJECTDIR}/src/Controller/Common/CommonLogic.o: src/Controller/Common/CommonLogic.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common

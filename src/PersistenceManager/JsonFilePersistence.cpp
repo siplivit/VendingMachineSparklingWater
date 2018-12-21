@@ -15,9 +15,10 @@ using json = nlohmann::json;
 using namespace std;
 
 
-JsonFilePersistence::JsonFilePersistence(const std::string& settingsFileName_, const std::string& accountingDataFileName_)
+JsonFilePersistence::JsonFilePersistence(const std::string& settingsFileName_, const std::string& accountingDataFileName_, const std::string& balanceFileName_)
     : settingsFileName(settingsFileName_)
     , accountingDataFileName(accountingDataFileName_)
+    , balanceFileName(balanceFileName_)
 {
     
 }
@@ -53,7 +54,8 @@ bool JsonFilePersistence::saveSettings(const Settings& s)
 
 namespace settingstypes {
     
-    void to_json(json& j, const Settings& p) {
+    void to_json(json& j, const Settings& p)
+    {
         j = json{
             {"settings_general",{
                 {"currency", p.settings_general.currency},
@@ -66,7 +68,8 @@ namespace settingstypes {
         };
     }
 
-    void from_json(const json& j, Settings& p) {
+    void from_json(const json& j, Settings& p)
+    {
         
         if (j.find("settings_general") != j.end()) {
             p.settings_general.currency = j["settings_general"].value("currency", CURRENCY_DEFAULT);
@@ -89,14 +92,6 @@ namespace settingstypes {
             p.cupDisp.cupDropTime = CUPDROPTIME_DEFAULT;
             p.cupDisp.cupDropSensorEnableFlg = CUPDROPSENSORENABLEFLG_DEFAULT;
         }
- /*       
-        p.settings_general.currency = j["settings_general"]["currency"].get<std::string>();
-        p.settings_general.languageID = j["settings_general"]["languageID"].get<int>();
-        p.settings_general.products_amount = PRODUCTS_AMOUNT;
-        p.cupDisp.cupTubesAmount = j["cupDisp"]["cupTubesAmount"].get<int>();
-        p.cupDisp.cupDropTime = j["cupDisp"]["cupDropTime"].get<int>();
-        p.cupDisp.cupDropSensorEnableFlg = j["cupDisp"]["cupDropSensorEnableFlg"].get<bool>();
-*/       
     }
 
 }
@@ -122,32 +117,184 @@ bool JsonFilePersistence::saveAccountingData(const AccountingData& s)
       
 namespace settingstypes {
     
-    void to_json(json& j, const AccountingData& p) {
-        j = json{
-            {"AccountingData",{
-                {"MoneyIn", p.moneyIn},
-                {"MoneyOut", p.moneyOut},
-                {"Water", p.water},
-                {"Cups", p.cups}}}
-        };
+    void to_json(json& j, const AccountingData& p)
+    {
+        
+        int syrupEmount = p.syrups.size();
+        json ad;
+        
+        ad["moneyIn"] = p.moneyIn;
+        ad["moneyOut"] = p.moneyOut;
+        ad["water"] = p.water;
+        ad["cups"] = p.cups;
+        ad["syrupsEmount"] = syrupEmount;
+
+        for (auto it = p.syrups.begin(); it != p.syrups.end(); ++it)
+        {
+            ad["syrups"][std::to_string(it->first)] = it->second;
+        }
+        
+        j = ad;
     }
 
-    void from_json(const json& j, AccountingData& p) {
+    void from_json(const json& j, AccountingData& p)
+    {
         
-        if (j.find("AccountingData") != j.end())
+        int syrupEmount;
+        
+        if (j.find("moneyIn") != j.end())
         {
-            p.moneyIn = j["AccountingData"].value("MoneyIn", 0);
-            p.moneyOut= j["AccountingData"].value("MoneyOut", 0);
-            p.water = j["AccountingData"].value("Water", 0);
-            p.cups = j["AccountingData"].value("Cups", 0);
+            p.moneyIn = j["moneyIn"].get<int>();
         }
         else
         {
             p.moneyIn = 0;
+        }
+        
+        if (j.find("moneyOut") != j.end())
+        {
+            p.moneyOut= j["moneyOut"].get<int>();
+        }
+        else
+        {
             p.moneyOut = 0;
+        }
+        
+        if (j.find("water") != j.end())
+        {
+            p.water= j["water"].get<int>();
+        }
+        else
+        {
             p.water = 0;
+        }
+        
+        if (j.find("cups") != j.end())
+        {
+            p.cups= j["cups"].get<int>();
+        }
+        else
+        {
             p.cups = 0;
+        }
+        
+        
+        if (j.find("syrupsEmount") != j.end())
+        {
+            syrupEmount = j["syrupsEmount"].get<int>();
+        }
+        else
+        {
+            syrupEmount = 0;
+        }
+        
+        for (int a = 1; a <= syrupEmount; a++)
+        {
+            if (j.find("syrups") != j.end())
+            {
+                p.syrups.insert (pair<int,int>(a, j["syrups"].value(std::to_string(a), 0)));
+            }
+            else
+            {
+                p.syrups.insert (pair<int,int>(a, 0));
+            }
         }
     }
 
+}
+
+bool JsonFilePersistence::readBalance(Balance& s)
+{
+    json j;
+    std::ifstream input_file(balanceFileName);
+    try{
+        j = json::parse(input_file);
+    } catch (...) {
+        j = json({});
+    }
+    s = j;
+}
+
+bool JsonFilePersistence::saveBalance(const Balance& s)
+{
+    std::ofstream output_file(balanceFileName);
+    json j_out = s;
+    output_file << std::setw(4) << j_out;
+}
+
+namespace settingstypes {
+    
+    void to_json(json& j, const Balance& p)
+    {
+        
+        int syrupEmount = p.syrups.size();
+        json ad;
+        
+        ad["money"] = p.money;
+        ad["water"] = p.water;
+        ad["cups"] = p.cups;
+
+        ad["syrupsEmount"] = syrupEmount;
+
+        for (auto it = p.syrups.begin(); it != p.syrups.end(); ++it)
+        {
+            ad["syrups"][std::to_string(it->first)] = it->second;
+        }
+        
+        j = ad;
+    }
+
+    void from_json(const json& j, Balance& p)
+    {
+        
+        int syrupEmount;
+        
+        if (j.find("money") != j.end())
+        {
+            p.money = j["money"].get<int>();
+        }
+        else
+        {
+            p.money = 0;
+        }
+        
+        if (j.find("water") != j.end())
+        {
+            p.water = j["water"].get<int>();
+        }
+        else
+        {
+            p.water = 0;
+        }
+        
+        if (j.find("cups") != j.end())
+        {
+            p.cups = j["cups"].get<int>();
+        }
+        else
+        {
+            p.cups = 0;
+        }
+        
+        if (j.find("syrupsEmount") != j.end())
+        {
+            syrupEmount = j["syrupsEmount"].get<int>();
+        }
+        else
+        {
+            syrupEmount = 0;
+        }
+        
+        for (int a = 1; a <= syrupEmount; a++)
+        {
+            if (j.find("syrups") != j.end())
+            {
+                p.syrups.insert (pair<int,int>(a, j["syrups"].value(std::to_string(a), 0)));
+            }
+            else
+            {
+                p.syrups.insert (pair<int,int>(a, 0));
+            }
+        }
+    }
 }

@@ -32,19 +32,36 @@ int main(int argc, char** argv)
 {
     setlocale(LC_ALL, "ru");
     
-    PersistenceManager pm(std::make_unique<JsonFilePersistence>("db/Settings.json", "db/AccountingData.json"));
+    PersistenceManager pm(std::make_unique<JsonFilePersistence>("db/Settings.json", "db/AccountingData.json", "db/Balance.json"));
     
     Settings mySettings;
     AccountingData myAccountingData;
+    Balance myBalance;
     
     pm.readSettings(mySettings);
     pm.readAccountingData(myAccountingData);
+    pm.readBalance(myBalance);
     
     mySettings.cupDisp.cupTubesAmount++;
     myAccountingData.moneyIn++;
     
+    myAccountingData.syrups[1]++;
+    myAccountingData.syrups[2]++;
+    myAccountingData.syrups[3]++;
+    myAccountingData.syrups[4]++;
+    myAccountingData.syrups[5]++;
+    myAccountingData.syrups[6]++;
+    
+    myBalance.syrups[1]++;
+    myBalance.syrups[2]++;
+    myBalance.syrups[3]++;
+    myBalance.syrups[4]++;
+    myBalance.syrups[5]++;
+    myBalance.syrups[6]++;
+    
     pm.saveSettings(mySettings);
     pm.saveAccountingData(myAccountingData);
+    pm.saveBalance(myBalance);
  
     return 0;
 }

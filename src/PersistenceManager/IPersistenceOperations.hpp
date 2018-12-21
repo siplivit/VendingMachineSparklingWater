@@ -28,6 +28,9 @@ public:
     virtual bool readAccountingData(AccountingData& s) = 0;
     virtual bool saveAccountingData(const AccountingData& s) = 0;
     
+    virtual bool readBalance(Balance& s) = 0;
+    virtual bool saveBalance(const Balance& s) = 0;
+    
     virtual ~IPersistenceOperations(){}
 };
 

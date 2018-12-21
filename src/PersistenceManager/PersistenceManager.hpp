@@ -35,6 +35,9 @@ public:
     bool readAccountingData(AccountingData& s);
     bool saveAccountingData(const AccountingData& s);
     
+    bool readBalance(Balance& s);
+    bool saveBalance(const Balance& s);
+    
     std::unique_ptr<IPersistenceOperations> persistence;
 };
 

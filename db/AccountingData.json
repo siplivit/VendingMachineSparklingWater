@@ -1,8 +1,15 @@
 {
-    "AccountingData": {
-        "Cups": 0,
-        "MoneyIn": 1,
-        "MoneyOut": 0,
-        "Water": 0
-    }
+    "cups": 0,
+    "moneyIn": 27,
+    "moneyOut": 0,
+    "syrups": {
+        "1": 1080,
+        "2": 2080,
+        "3": 3080,
+        "4": 4080,
+        "5": 5080,
+        "6": 6080
+    },
+    "syrupsEmount": 6,
+    "water": 0
 }

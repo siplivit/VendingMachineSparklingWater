@@ -37,3 +37,13 @@ bool PersistenceManager::saveAccountingData(const AccountingData& s)
 {
     persistence->saveAccountingData(s);
 }
+
+bool PersistenceManager::readBalance(Balance& s)
+{
+    persistence->readBalance(s);
+}
+
+bool PersistenceManager::saveBalance(const Balance& s)
+{
+    persistence->saveBalance(s);
+}

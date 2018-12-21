@@ -31,7 +31,7 @@ class JsonFilePersistence : public IPersistenceOperations
 {
 public:
         
-    JsonFilePersistence(const std::string&, const std::string&);
+    JsonFilePersistence(const std::string&, const std::string&, const std::string&);
                 
     bool readSettings(Settings& s) override;
     bool saveSettings(const Settings& s) override;
@@ -39,12 +39,16 @@ public:
     bool readAccountingData(AccountingData& s) override;
     bool saveAccountingData(const AccountingData& s) override;
     
+    bool readBalance(Balance& s) override;
+    bool saveBalance(const Balance& s) override;
+    
     void setFileName(const std::string s);
     std::string getFileName();
 
 private:
     std::string settingsFileName;
     std::string accountingDataFileName;
+    std::string balanceFileName;
 };
 
 namespace settingstypes {
