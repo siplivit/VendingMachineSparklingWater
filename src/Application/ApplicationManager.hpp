@@ -11,10 +11,5 @@
  * Created on December 21, 2018, 6:17 PM
  */
 
-#ifndef APPLICATION_HPP
-#define APPLICATION_HPP
-
-
-
-#endif /* APPLICATION_HPP */
+#pragma once
 

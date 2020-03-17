@@ -36,12 +36,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/src/Application/Application.o \
+	${OBJECTDIR}/src/Application/ApplicationManager.o \
+	${OBJECTDIR}/src/Controller/ApplicationController.o \
 	${OBJECTDIR}/src/Controller/Common/CommonLogic.o \
 	${OBJECTDIR}/src/Controller/Common/sm/CommonSM.o \
 	${OBJECTDIR}/src/Controller/Common/sm/events/Events.o \
 	${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o \
-	${OBJECTDIR}/src/Controller/VendingMachineController.o \
 	${OBJECTDIR}/src/CupDispenser.o \
 	${OBJECTDIR}/src/PersistenceManager/JsonFilePersistence.o \
 	${OBJECTDIR}/src/PersistenceManager/PersistenceManager.o \
@@ -50,6 +50,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/SettingsManager.o \
 	${OBJECTDIR}/src/Syrup.o \
 	${OBJECTDIR}/src/SyrupPump.o \
+	${OBJECTDIR}/src/Types/Types.o \
 	${OBJECTDIR}/src/practice/list/listclass.o
 
 
@@ -82,10 +83,15 @@ ${OBJECTDIR}/main.o: main.cpp
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
-${OBJECTDIR}/src/Application/Application.o: src/Application/Application.cpp
+${OBJECTDIR}/src/Application/ApplicationManager.o: src/Application/ApplicationManager.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/Application
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Application/Application.o src/Application/Application.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Application/ApplicationManager.o src/Application/ApplicationManager.cpp
+
+${OBJECTDIR}/src/Controller/ApplicationController.o: src/Controller/ApplicationController.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/Controller
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/ApplicationController.o src/Controller/ApplicationController.cpp
 
 ${OBJECTDIR}/src/Controller/Common/CommonLogic.o: src/Controller/Common/CommonLogic.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common
@@ -106,11 +112,6 @@ ${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o: src/Controller/Common/sm/st
 	${MKDIR} -p ${OBJECTDIR}/src/Controller/Common/sm/states
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/Common/sm/states/Idle.o src/Controller/Common/sm/states/Idle.cpp
-
-${OBJECTDIR}/src/Controller/VendingMachineController.o: src/Controller/VendingMachineController.cpp
-	${MKDIR} -p ${OBJECTDIR}/src/Controller
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Controller/VendingMachineController.o src/Controller/VendingMachineController.cpp
 
 ${OBJECTDIR}/src/CupDispenser.o: src/CupDispenser.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -151,6 +152,11 @@ ${OBJECTDIR}/src/SyrupPump.o: src/SyrupPump.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/SyrupPump.o src/SyrupPump.cpp
+
+${OBJECTDIR}/src/Types/Types.o: src/Types/Types.cpp
+	${MKDIR} -p ${OBJECTDIR}/src/Types
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Types/Types.o src/Types/Types.cpp
 
 ${OBJECTDIR}/src/practice/list/listclass.o: src/practice/list/listclass.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/practice/list

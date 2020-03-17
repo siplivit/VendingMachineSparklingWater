@@ -32,6 +32,8 @@
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Product.hpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/events/Events.hpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/db/Settings.json</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Application/Application.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/libs/json/src/json.hpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Syrup.hpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/VendingMachineController.cpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/nbproject/private/configurations.xml</file>
@@ -45,11 +47,13 @@
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Types/Settings.hpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Syrup.cpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/states/states.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/db/Balance.json</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Types/AccountingData.hpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/states/Menu.hpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Product.cpp</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/nbproject/private/c_standard_headers_indexer.c</file>
             <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Controller/Common/sm/states/Idle.hpp</file>
+            <file>file:/home/vitalii/Projects/VendingMachineSparklingWater/src/Application/Application.cpp</file>
         </group>
     </open-files>
 </project-private>

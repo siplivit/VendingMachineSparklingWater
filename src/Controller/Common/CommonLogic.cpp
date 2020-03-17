@@ -1,5 +1,5 @@
 #include "CommonLogic.hpp"
-#include "../VendingMachineController.hpp"
+#include "../ApplicationController.hpp"
 
 CommonLogic::CommonLogic()
     : name("Common Logic string")
